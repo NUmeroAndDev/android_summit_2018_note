@@ -54,7 +54,7 @@
   app:dependency="enable_sync" />
 ```
 
-### Dynamic Summaryies  
+### Dynamic Summaries  
 
 * 値の変更を監視して summary を動的に変更できる  
 
