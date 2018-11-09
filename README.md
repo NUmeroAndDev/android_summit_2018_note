@@ -91,7 +91,8 @@ findPreference("enable_sync").summaryProvider = syncSummaryProvider
 ```
 class SettingsActovoty : AppCompatActicity(), PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
   override fun onPreferenceStartFragment(caller: PreferenceFragmentCompat, pref: Preference):Boolean {
-    // Handle transition anim
+    // tansition を独自で実装する場合は true
+    // 標準処理にお任せの場合は false
   }
 }
 ```
