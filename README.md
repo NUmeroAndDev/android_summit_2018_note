@@ -28,8 +28,6 @@
   </PreferenceCategory>
   
 </androidx.preference.PreferenceScreen>
-
-
 ```
 
 * `EditTextPreference` なんてあったけ?  
@@ -72,9 +70,29 @@ val syncSummaryProvider = SummaryProvider<SwitchPreferenceCompat> { preference -
 findPreference("enable_sync").summaryProvider = syncSummaryProvider
 ```
 
-### Multiple screen architexture  
+### Multiple screen architecture  
 
 * Activity > Fragment > Hierarchy を Activity > Settings Screen に
+* Preference 間の画面遷移が簡単に  
+
+```
+<androidx.preference.PreferenceScreen 
+  …>
+  
+  <Preference
+    app:key="messages_fragment"
+    app:title="Messages"
+    app:fragment="com.example.MyMessageFragment" />
+  
+</androidx.preference.PreferenceScreen>
+```
 
 
-## 
+```
+class SettingsActovoty : AppCompatActicity(), PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
+  override fun onPreferenceStartFragment(caller: PreferenceFragmentCompat, pref: Preference):Boolean {
+    // Handle transition anim
+  }
+}
+```
+
