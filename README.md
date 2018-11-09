@@ -97,3 +97,28 @@ class SettingsActovoty : AppCompatActicity(), PreferenceFragmentCompat.OnPrefere
 }
 ```
 
+## [Get Animated](https://youtu.be/N_x7SV3I3P0) [WIP]
+
+* android.view.animation が (Consider)Depereted  
+WindowAnimation や Fragment のアニメーションはこれを使用している  
+
+* android.animation を使うことを推奨  
+
+* ObjectAnimator はリフレクション使うからあまりよろしくない
+
+```
+// この alpha が問題
+ObjectAnimator.ofFloat(view, "alpha", 1f, 0f).apply {
+  duration = 100
+}.start()
+
+ObjectAnimator.ofFloat(view, View.ALPHA, 1f, 0f).apply {
+  duration = 100
+}.start()
+```
+
+* PropertyValuesHolder  
+```
+val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 0.5f, 1f)
+```
+
