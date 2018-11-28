@@ -122,3 +122,7 @@ ObjectAnimator.ofFloat(view, View.ALPHA, 1f, 0f).apply {
 val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 0.5f, 1f)
 ```
 
+
+## [Getting the Most from the New Multi-Camera API](https://youtu.be/u38wOv2a_dA)  
+
+[Medium](https://medium.com/androiddevelopers/getting-the-most-from-the-new-multi-camera-api-5155fb3d77d9)
